@@ -1,0 +1,134 @@
+/* ==========================================================================
+   1. CSS O'ZGARUVCHILARI (PALITRA) VA ASOSIY SOZLAMALAR
+   ========================================================================== */
+:root {
+    /* 3-4 ta rangdan iborat ranglar palitrasi */
+    --asosiy-rang: #b33939;           /* HEX: To'q qizil (Fast food mavzusiga xos) */
+    --ikkilamchi-rang: #2c3a47;       /* HEX: To'q ko'k / qora tus */
+    --och-fon: #f8f9fa;               /* HEX: Oqish fon */
+    --matn-rangi: rgb(44, 58, 71);    /* RGB: Asosiy o'qiladigan matn rangi */
+    --havola-hover: rgba(179, 57, 57, 0.85); /* RGBA: Ustiga borgandagi rang */
+}
+
+/* ==========================================================================
+   2. BODY VA UMUMIY MATN USLUBLARI
+   ========================================================================== */
+body {
+    /* Google Fonts va zaxira shriftlar */
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--matn-rangi);
+    background-color: var(--och-fon);
+}
+
+/* ==========================================================================
+   3. SARLAVHALAR (H1, H2, H3)
+   ========================================================================== */
+/* Guruhlangan selektor */
+h1, h2, h3 {
+    font-family: 'Roboto', Arial, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Teg selektori: h1 */
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: white; /* Rang nomi (nomi bilan berilgan) */
+    background-color: var(--asosiy-rang);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 22px;
+    color: var(--ikkilamchi-rang);
+}
+
+h3 {
+    font-size: 18px;
+    color: var(--asosiy-rang);
+    font-style: italic;
+}
+
+/* ==========================================================================
+   4. NAVIGATSIYA VA HAVOLALAR (Avlod selektori & holatlar)
+   ========================================================================== */
+/* Avlod selektori */
+nav ul {
+    list-style-type: square;
+}
+
+nav a {
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+/* Havolalar va ularning holatlari */
+a {
+    color: var(--asosiy-rang);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #8c2626; /* Bosilganidan keyingi rang */
+}
+
+a:hover {
+    color: var(--havola-hover);
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   5. PARAGRAFLAR, IQTIBOS VA RO'YXATLAR
+   ========================================================================== */
+p {
+    text-align: justify;
+}
+
+/* Class selektori */
+.izoh {
+    font-style: italic;
+    color: rgb(100, 110, 120);
+    letter-spacing: 0.3px;
+}
+
+blockquote {
+    font-style: italic;
+    color: var(--ikkilamchi-rang);
+    background-color: rgba(220, 221, 225, 0.4);
+}
+
+mark {
+    background-color: #f7d794;
+    color: black;
+}
+
+dt {
+    font-weight: 700;
+    color: var(--asosiy-rang);
+}
+
+dd {
+    margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   6. BO'LIMLAR VA ID SELEKTORLARI
+   ========================================================================== */
+/* Id selektorlari */
+#aloqa {
+    background-color: rgb(241, 242, 246);
+}
+
+#muallif {
+    background-color: rgba(245, 246, 250, 0.9);
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: rgb(120, 120, 120);
+}
