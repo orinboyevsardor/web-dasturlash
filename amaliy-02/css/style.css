@@ -1,0 +1,563 @@
+/* B1: blok modeli */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   1. CSS O'ZGARUVCHILARI (PALITRA) VA ASOSIY SOZLAMALAR
+   ========================================================================== */
+:root {
+    /* 3-4 ta rangdan iborat ranglar palitrasi */
+    --asosiy-rang: #b33939;           /* HEX: To'q qizil (Fast food mavzusiga xos) */
+    --ikkilamchi-rang: #2c3a47;       /* HEX: To'q ko'k / qora tus */
+    --och-fon: #f8f9fa;               /* HEX: Oqish fon */
+    --matn-rangi: rgb(44, 58, 71);    /* RGB: Asosiy o'qiladigan matn rangi */
+    --havola-hover: rgba(179, 57, 57, 0.85); /* RGBA: Ustiga borgandagi rang */
+    --oq-rang: white;
+    --chegara-rangi: rgba(44, 58, 71, 0.18);
+    --soya: rgba(44, 58, 71, 0.12);
+}
+
+/* ==========================================================================
+   2. BODY VA UMUMIY MATN USLUBLARI
+   ========================================================================== */
+body {
+    /* Google Fonts va zaxira shriftlar */
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--matn-rangi);
+    background-color: var(--och-fon);
+}
+
+/* ==========================================================================
+   3. SARLAVHALAR (H1, H2, H3)
+   ========================================================================== */
+/* Guruhlangan selektor */
+h1, h2, h3 {
+    font-family: 'Roboto', Arial, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Teg selektori: h1 */
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: white; /* Rang nomi (nomi bilan berilgan) */
+    background-color: var(--asosiy-rang);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 22px;
+    color: var(--ikkilamchi-rang);
+}
+
+h3 {
+    font-size: 18px;
+    color: var(--asosiy-rang);
+    font-style: italic;
+}
+
+/* ==========================================================================
+   4. NAVIGATSIYA VA HAVOLALAR (Avlod selektori & holatlar)
+   ========================================================================== */
+/* Avlod selektori */
+nav ul {
+    list-style-type: square;
+}
+
+nav a {
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+/* Havolalar va ularning holatlari */
+a {
+    color: var(--asosiy-rang);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #8c2626; /* Bosilganidan keyingi rang */
+}
+
+a:hover {
+    color: var(--havola-hover);
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   5. PARAGRAFLAR, IQTIBOS VA RO'YXATLAR
+   ========================================================================== */
+p {
+    text-align: justify;
+}
+
+/* Class selektori */
+.izoh {
+    font-style: italic;
+    color: rgb(100, 110, 120);
+    letter-spacing: 0.3px;
+}
+
+blockquote {
+    font-style: italic;
+    color: var(--ikkilamchi-rang);
+    background-color: rgba(220, 221, 225, 0.4);
+}
+
+mark {
+    background-color: #f7d794;
+    color: black;
+}
+
+dt {
+    font-weight: 700;
+    color: var(--asosiy-rang);
+}
+
+dd {
+    margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   6. BO'LIMLAR VA ID SELEKTORLARI
+   ========================================================================== */
+/* Id selektorlari */
+#aloqa {
+    background-color: rgb(241, 242, 246);
+}
+
+#muallif {
+    background-color: rgba(245, 246, 250, 0.9);
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: rgb(120, 120, 120);
+}
+
+/* ==========================================================================
+   7. YANGI: UMUMIY MAKET (2-amaliy ish)
+   ========================================================================== */
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* B5: yopishqoq sarlavha */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--oq-rang);
+    border-bottom: 1px solid var(--chegara-rangi);
+}
+
+/* B8: navigatsiya Flexbox bilan */
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a:hover {
+    color: var(--ikkilamchi-rang);
+}
+
+nav a:visited {
+    color: #8c2626;
+}
+
+.logo {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* B2: konteyner */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+/* B11: ham gorizontal, ham vertikal markazlashtirilgan */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
+    margin: 24px 0;
+    padding: 16px 24px;
+    background-color: var(--asosiy-rang);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.hero h1 {
+    color: var(--oq-rang);
+    margin: 0;
+}
+
+/* Asosiy qism + aside */
+.sahifa {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.kontent {
+    flex: 3 1 480px;
+    min-width: 0;
+}
+
+aside {
+    flex: 1 1 240px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    background-color: var(--oq-rang);
+    border: 1px solid var(--chegara-rangi);
+    border-radius: 8px;
+}
+
+aside h2 {
+    margin-top: 0;
+}
+
+aside ul {
+    padding-left: 20px;
+}
+
+section {
+    margin-bottom: 24px;
+}
+
+blockquote {
+    margin: 16px 0;
+    padding: 12px 20px;
+    border-left: 4px solid var(--ikkilamchi-rang);
+}
+
+/* ==========================================================================
+   8. KARTALAR (B3, B4, B6, B9)
+   ========================================================================== */
+.kartalar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.karta {
+    flex: 1 1 280px;
+    position: relative;
+    padding: 16px 24px;
+    margin-bottom: 8px;
+    background-color: var(--oq-rang);
+    border: 1px solid var(--chegara-rangi);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px var(--soya);
+}
+
+.karta:hover {
+    border-color: var(--ikkilamchi-rang);
+    box-shadow: 0 4px 12px var(--soya);
+}
+
+.karta h3 {
+    margin-top: 8px;
+}
+
+.karta p {
+    text-align: left;
+}
+
+/* B6: belgi */
+.belgi {
+    position: absolute;
+    top: -10px;
+    right: 12px;
+    padding: 4px 12px;
+    background-color: #f7d794;
+    color: var(--ikkilamchi-rang);
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 12px;
+}
+
+.tugma {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--asosiy-rang);
+    color: var(--oq-rang);
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.tugma:hover,
+.tugma:visited:hover {
+    background-color: var(--ikkilamchi-rang);
+    color: var(--oq-rang);
+}
+
+.tugma:visited {
+    color: var(--oq-rang);
+}
+
+/* ==========================================================================
+   9. JADVAL
+   ========================================================================== */
+.jadval-orami {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--oq-rang);
+}
+
+caption {
+    padding: 8px;
+    font-weight: 700;
+    color: var(--asosiy-rang);
+    text-align: left;
+}
+
+th, td {
+    padding: 10px 14px;
+    border: 1px solid var(--chegara-rangi);
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--ikkilamchi-rang);
+    color: var(--oq-rang);
+}
+
+tbody th, tfoot th {
+    background-color: rgba(44, 58, 71, 0.06);
+}
+
+tbody tr:hover td {
+    background-color: #fef9c3;
+}
+
+/* ==========================================================================
+   10. MEDIA
+   ========================================================================== */
+.galereya {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+figure {
+    flex: 1 1 280px;
+    margin: 0;
+}
+
+figure img {
+    border-radius: 8px;
+}
+
+figcaption {
+    padding: 8px 0;
+    font-size: 14px;
+    color: #475569;
+    text-align: center;
+}
+
+.xarita {
+    width: 100%;
+    height: 320px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* ==========================================================================
+   11. FORMA (B12)
+   ========================================================================== */
+.forma {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    background-color: var(--oq-rang);
+    border: 1px solid var(--chegara-rangi);
+    border-radius: 8px;
+}
+
+.forma-qator {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.forma-guruh {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.forma-qator .forma-guruh {
+    flex: 1 1 240px;
+}
+
+label {
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--matn-rangi);
+    border: 1px solid #94a3b8;
+    border-radius: 6px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--ikkilamchi-rang);
+    border-color: var(--ikkilamchi-rang);
+}
+
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    padding: 12px 16px;
+    margin: 0;
+    border: 1px solid var(--chegara-rangi);
+    border-radius: 6px;
+}
+
+legend {
+    padding: 0 8px;
+    font-weight: 500;
+}
+
+.tanlov {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ==========================================================================
+   12. FOOTER (B10) VA "YUQORIGA" TUGMASI (B7)
+   ========================================================================== */
+footer {
+    padding: 24px 0;
+    background-color: var(--oq-rang);
+    border-top: 1px solid var(--chegara-rangi);
+}
+
+.footer-ichki {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-ustun {
+    flex: 1 1 240px;
+    text-align: left;
+}
+
+.footer-ustun h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+footer .footer-ustun p {
+    text-align: left;
+    font-size: 14px;
+}
+
+footer .mualliflik {
+    margin: 16px 0 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.yuqoriga {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--asosiy-rang);
+    color: var(--oq-rang);
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px var(--soya);
+}
+
+.yuqoriga:hover,
+.yuqoriga:visited {
+    background-color: var(--ikkilamchi-rang);
+    color: var(--oq-rang);
+}
+
+/* Yuqoriga tugmasi qalqib turgan sarlavha tagida qolmasin */
+html {
+    scroll-behavior: smooth;
+}
+
+h2[id] {
+    scroll-margin-top: 80px;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .forma {
+        padding: 16px;
+    }
+}

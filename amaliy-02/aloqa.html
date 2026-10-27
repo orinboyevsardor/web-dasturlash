@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tez Taom xizmatiga taom buyurtma qilish shakli va manzil xaritasi.">
+    <title>Buyurtma va Aloqa — Tez Taom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+    <header>
+        <nav>
+            <a class="logo" href="index.html">Tez Taom</a>
+            <ul>
+                <li><a href="index.html">Bosh sahifa</a></li>
+                <li><a href="batafsil.html">Batafsil ma'lumot va Menyu</a></li>
+                <li><a href="aloqa.html">Buyurtma va aloqa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Buyurtma berish va Aloqa</h1>
+        </section>
+
+        <div class="sahifa">
+            <div class="kontent">
+                <section>
+                    <h2>Buyurtma shakli</h2>
+                    <p>Shaklni to'ldiring, operatorimiz buyurtmani tasdiqlash uchun siz bilan bog'lanadi. Yulduzcha (*) bilan belgilangan maydonlar majburiy.</p>
+
+                    <form class="forma" method="post">
+                        <div class="forma-qator">
+                            <div class="forma-guruh">
+                                <label for="ism">Ismingiz *</label>
+                                <input type="text" id="ism" name="ism" placeholder="Masalan: Sardor" required>
+                            </div>
+                            <div class="forma-guruh">
+                                <label for="telefon">Telefon raqam *</label>
+                                <input type="tel" id="telefon" name="telefon" placeholder="+998901234567" pattern="\+998[0-9]{9}" title="Format: +998901234567" required>
+                            </div>
+                        </div>
+
+                        <div class="forma-qator">
+                            <div class="forma-guruh">
+                                <label for="email">Elektron pochta</label>
+                                <input type="email" id="email" name="email" placeholder="ism@example.com">
+                            </div>
+                            <div class="forma-guruh">
+                                <label for="manzil">Yetkazish manzili *</label>
+                                <input type="text" id="manzil" name="manzil" placeholder="Ko'cha, uy raqami" required>
+                            </div>
+                        </div>
+
+                        <div class="forma-qator">
+                            <div class="forma-guruh">
+                                <label for="taom">Taom</label>
+                                <select id="taom" name="taom">
+                                    <option value="urganch-lavash">«Urganch» lavashi</option>
+                                    <option value="dabl-chizburger">«Dabl Chizburger»</option>
+                                    <option value="zinger">«Zinger» tovuq burger</option>
+                                    <option value="fri">Kartoshka fri</option>
+                                    <option value="somsa">Somsa (go'shtli)</option>
+                                </select>
+                            </div>
+                            <div class="forma-guruh">
+                                <label for="soni">Soni</label>
+                                <input type="number" id="soni" name="soni" min="1" max="20" value="1">
+                            </div>
+                            <div class="forma-guruh">
+                                <label for="sana">Yetkazish sanasi</label>
+                                <input type="date" id="sana" name="sana">
+                            </div>
+                        </div>
+
+                        <fieldset>
+                            <legend>To'lov usuli</legend>
+                            <div class="tanlov">
+                                <input type="radio" id="naqd" name="tolov" value="naqd" checked>
+                                <label for="naqd">Naqd pul</label>
+                            </div>
+                            <div class="tanlov">
+                                <input type="radio" id="karta" name="tolov" value="karta">
+                                <label for="karta">HUMO / Uzcard</label>
+                            </div>
+                        </fieldset>
+
+                        <div class="forma-guruh">
+                            <label for="izoh">Kuryerga izoh</label>
+                            <textarea id="izoh" name="izoh" rows="4" placeholder="Masalan: sousni alohida qadoqlang"></textarea>
+                        </div>
+
+                        <div class="tanlov">
+                            <input type="checkbox" id="rozilik" name="rozilik" required>
+                            <label for="rozilik">Shaxsiy ma'lumotlarimni qayta ishlashga roziman *</label>
+                        </div>
+
+                        <button type="submit" class="tugma">Buyurtma yuborish</button>
+                    </form>
+                </section>
+
+                <section>
+                    <h2>Bizning manzil</h2>
+                    <p>Xorazm viloyati, Urganch shahri, Al-Xorazmiy ko'chasi, 110-uy. Telefon: <a href="tel:+998901234567">+998 (90) 123-45-67</a>.</p>
+                    <iframe class="xarita" title="Urganch shahri xaritasi" src="https://www.google.com/maps?q=Urganch&amp;output=embed" loading="lazy"></iframe>
+                </section>
+            </div>
+
+            <aside>
+                <h2>Esda tuting</h2>
+                <ul>
+                    <li>Shahar markazida yetkazish bepul</li>
+                    <li>Kechiksa, promokod beriladi</li>
+                    <li>Narxlarni menyudan ko'ring</li>
+                </ul>
+                <a class="tugma" href="index.html#narxlar">Narxlarni ko'rish</a>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-ichki">
+            <div class="footer-ustun">
+                <h2>Tez Taom</h2>
+                <p>Urganch shahrida issiq, sifatli va halol taomlarni 30 daqiqada yetkazib beramiz.</p>
+            </div>
+            <div class="footer-ustun">
+                <h2>Bog'lanish</h2>
+                <p>Al-Xorazmiy ko'chasi, 110-uy<br>+998 (90) 123-45-67<br>info@teztaom.uz</p>
+            </div>
+        </div>
+        <p class="mualliflik">&copy;&nbsp;2026 «Tez Taom» MCHJ. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+    <a class="yuqoriga" href="#top" aria-label="Sahifa boshiga qaytish">&uarr;</a>
+</body>
+</html>
