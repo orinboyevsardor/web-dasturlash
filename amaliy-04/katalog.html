@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tez Taom katalogi: qidiruv, filtr va saralash bilan barcha taomlar.">
+    <title>Katalog — Tez Taom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+    <header>
+        <nav>
+            <a class="logo" href="index.html">Tez Taom</a>
+            <button type="button" class="menyu-tugma" id="menyuTugma" aria-label="Menyuni ochish" aria-expanded="false">&#9776;</button>
+            <ul id="menyuRoyxat">
+                <li><a href="index.html">Bosh sahifa</a></li>
+                <li><a href="katalog.html">Katalog</a></li>
+                <li><a href="aloqa.html">Buyurtma va aloqa</a></li>
+            </ul>
+            <button type="button" class="tema-tugma" id="temaTugma" aria-label="Tungi rejim">&#9790;</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Tez Taom — Menyu Katalogi</h1>
+        </section>
+
+        <div class="sahifa">
+            <div class="kontent">
+                <section>
+                    <h2>Statistika</h2>
+                    <div class="statistika" id="statistika">
+                        <div class="stat"><span class="stat-qiymat" id="statJami"></span><span>Jami taomlar</span></div>
+                        <div class="stat"><span class="stat-qiymat" id="statOrtacha"></span><span>O'rtacha narx</span></div>
+                        <div class="stat"><span class="stat-qiymat" id="statQimmat"></span><span>Eng qimmat taom</span></div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Taomlar</h2>
+                    <div class="boshqaruv">
+                        <div class="forma-guruh">
+                            <label for="qidiruv">Qidiruv</label>
+                            <input type="search" id="qidiruv" placeholder="Taom nomi...">
+                        </div>
+                        <div class="forma-guruh">
+                            <label for="kategoriya">Kategoriya</label>
+                            <select id="kategoriya"></select>
+                        </div>
+                        <div class="forma-guruh">
+                            <label for="saralash">Saralash</label>
+                            <select id="saralash">
+                                <option value="asl">Standart</option>
+                                <option value="narx-osish">Narx: arzondan qimmatga</option>
+                                <option value="narx-kamayish">Narx: qimmatdan arzonga</option>
+                                <option value="nom">Nom bo'yicha (A–Z)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="natija-soni">Ko'rsatilmoqda: <strong id="soni">0</strong> ta</p>
+                    <div class="kartalar" id="konteyner"></div>
+                    <p class="bosh-xabar" id="boshXabar" hidden>Hech narsa topilmadi</p>
+                </section>
+            </div>
+
+            <aside>
+                <h2>Esda tuting</h2>
+                <ul>
+                    <li>Shahar markazida yetkazish bepul</li>
+                    <li>Buyurtma: 09:00&ndash;23:00</li>
+                </ul>
+                <a class="tugma" href="aloqa.html">Buyurtma berish</a>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-ichki">
+            <div class="footer-ustun">
+                <h2>Tez Taom</h2>
+                <p>Urganch shahrida issiq, sifatli va halol taomlarni 30 daqiqada yetkazib beramiz.</p>
+            </div>
+            <div class="footer-ustun">
+                <h2>Bog'lanish</h2>
+                <p>Al-Xorazmiy ko'chasi, 110-uy<br>+998 (91) 374-78-96<br>info@teztaom.uz</p>
+            </div>
+        </div>
+        <p class="mualliflik">&copy;&nbsp;2026 «Tez Taom» MCHJ. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+    <div class="modal-fon" id="modalFon" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalNom">
+            <button type="button" class="modal-yopish" id="modalYopish" aria-label="Yopish">&times;</button>
+            <img id="modalRasm" alt="" width="800" height="500">
+            <h3 id="modalNom"></h3>
+            <p id="modalKategoriya"></p>
+            <p id="modalNarx"></p>
+            <p id="modalHolat"></p>
+            <p id="modalTeglar"></p>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/katalog.js"></script>
+</body>
+</html>
